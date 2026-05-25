@@ -1,0 +1,73 @@
+/* TransitFlow — design tokens · urbano + todas las edades */
+:root {
+  /* surfaces — bone cream */
+  --paper: #ECE6D7;
+  --paper-2: #E3DCC8;
+  --paper-3: #DBD3BA;
+  --surface: #F7F2E5;
+  --surface-2: #F2EBD9;
+  --ink: #14110E;
+  --ink-2: #26211B;
+  --ink-soft: #5C544A;
+  --ink-mute: #8C8273;
+  --rule: rgba(20,17,14,0.10);
+  --rule-2: rgba(20,17,14,0.18);
+
+  /* brand */
+  --orange: #FF5A1F;
+  --orange-2: #E54B14;
+  --orange-soft: #FFD3BD;
+  --blue: #1F6FEB;
+  --blue-soft: #C8DCFA;
+  --night: #1A2542;
+
+  /* status */
+  --ok: #2E7D45;
+  --ok-soft: #C9E1C7;
+  --warn: #D4A015;
+  --warn-soft: #F2DC9A;
+  --err: #C73E2A;
+  --err-soft: #F2C6BC;
+  --neutral: #6B6360;
+
+  /* dark mode */
+  --night-bg: #0E0C0A;
+  --night-2: #1B1813;
+  --night-3: #262119;
+  --night-rule: rgba(236,230,215,0.10);
+  --night-ink: #ECE6D7;
+  --night-soft: rgba(236,230,215,0.65);
+  --night-mute: rgba(236,230,215,0.40);
+
+  /* type — urbano + todas las edades */
+  --display: 'Bricolage Grotesque', 'Hanken Grotesk', system-ui, sans-serif;
+  --serif: 'Bricolage Grotesque', 'Hanken Grotesk', system-ui, sans-serif; /* alias para compat */
+  --sans: 'Hanken Grotesk', -apple-system, system-ui, 'Segoe UI', sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+
+.tf {
+  font-family: var(--sans);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.tf-display { font-family: var(--display); font-weight: 500; letter-spacing: -0.02em; }
+.tf-mono { font-family: var(--mono); font-feature-settings: "zero", "ss05"; }
+
+/* common atoms */
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+.hairline { border: 0; border-top: 1px solid var(--rule); height: 0; margin: 0; }
+.dot { width: 6px; height: 6px; border-radius: 999px; display: inline-block; }
+
+/* Bricolage italic falls back to oblique — clearly distinct */
+.tf-display em, .tf-display i { font-style: italic; font-weight: 500; }
